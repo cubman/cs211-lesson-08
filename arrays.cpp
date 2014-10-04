@@ -51,15 +51,16 @@ void task_4()
     assert(a[3] == 4);
     assert(a[4] == 5);    
 }
-#if 0
+
 // Task 5
 // copy arr1 to arr2
 void task_5_copy(int * arr1, int * arr2, int size)
 {
-
-    arr2 = arr1;
+    for(int i = 0; i<size; i++)
+    arr2[i] = arr1[i];
 }
 
+#if 0
 // Task 6
 // copy array `arr1` to array `arr2` of the same size
 void task_6_poor_copy(int * arr1, int * arr2)
@@ -89,5 +90,9 @@ int main()
 task_1();
 task_2();
 int r = task_3_zero();
+task_4();
+int a[3] = {0};
+int b[3];
+task_5_copy(a,b,3);
 }
 
