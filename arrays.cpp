@@ -60,18 +60,19 @@ void task_5_copy(int * arr1, int * arr2, int size)
     arr2[i] = arr1[i];
 }
 
-#if 0
+
 // Task 6
 // copy array `arr1` to array `arr2` of the same size
 void task_6_poor_copy(int * arr1, int * arr2)
 {
     // Hint: something wrong here; test this from main()
-    for(int i = 0; i < sizeof(arr2); ++i)
+    for(int i = 0; i < sizeof(arr2) / sizeof(int); ++i)
     {
         arr2[i] = arr1[i];
     }
 }
 
+#if 0 
 // Task 7
 // print array `arr`
 void task_7_print(int * arr, int size, char delim = ' ')
@@ -94,5 +95,6 @@ task_4();
 int a[3] = {0};
 int b[3];
 task_5_copy(a,b,3);
+task_6_poor_copy(a, b);
 }
 
